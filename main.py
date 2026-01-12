@@ -29,4 +29,23 @@ def calculation (choice, num1, num2):
     else:
         return "invalid operation"
     
+def main():
+    while True:
+        show_menu()
+        choice = int(input("Enter your choice(1-5): "))
+        if choice == 5:
+            print("Exiting calculator. Goodbye!")
+            break
+
+        num1, num2 = get_number()
+        if num1 is None:
+            continue
+
+        result = calculation(choice,num1, num2)
+        print("Result: ",result)
+
+if __name__ == "__main__":
+    main()
+
+    
      
